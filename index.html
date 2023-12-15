@@ -17,6 +17,28 @@
     </head>
     <body>
         <div
+            id="desktop",
+            style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            "
+        >
+            <iframe
+                style="
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 100%;
+                    margin-left: -35px;
+                    margin-right: -35px;
+                "
+                src="
+    https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9wLiMC6IhZi1yShJi8cUWx%2FHackathon-(1)%3Fpage-id%3D2%253A36%26type%3Ddesign%26node-id%3D19-136%26viewport%3D2132%252C-327%252C0.79%26t%3DF4sxlZtHKav4qd3s-1%26scaling%3Dcontain%26mode%3Ddesign"
+                allowfullscreen
+            ></iframe>
+        </div>        <div
+            id="mobile",
             style="
                 display: flex;
                 align-items: center;
@@ -38,4 +60,22 @@
             ></iframe>
         </div>
     </body>
+    <script>
+    window.addEventListener("DOMContentLoaded", function() {
+        function checkOrientation() {
+            var mobile = document.getElementById("mobile");
+            var desktop = document.getElementById("desktop");
+            if (window.innerWidth > window.innerHeight) {
+                mobile.style.display = "none";
+                desktop.style.display = "block";
+            } else {
+                mobile.style.display = "block";
+                desktop.style.display = "none";
+            }
+        }
+
+        checkOrientation();
+        window.addEventListener("resize", checkOrientation);
+    });
+</script>
 </html>

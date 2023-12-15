@@ -3,21 +3,16 @@
     <head>
         <meta http-equiv="Content-language" content="cs" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta
-            name="keywords"
-            content="meta,tag,kódování,lang,cs,če±tina,description,http-equiv"
-        />
-        <meta
-            name="description"
-            content="Meta tagy, zaji±tění če±tiny, popis stránky, klíčová slova"
-        />
+        <meta name="keywords" content="" />
+        <meta name="description" content="VánoceBezStarostí" />
         <link href="styl-menu.css" rel="stylesheet" type="text/css" />
 
         <title>První pořádně vyrobená stránka</title>
     </head>
     <body>
         <div
-            id="desktop",
+            id="desktop"
+            ,
             style="
                 display: flex;
                 align-items: center;
@@ -37,8 +32,10 @@
     https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9wLiMC6IhZi1yShJi8cUWx%2FHackathon-(1)%3Fpage-id%3D2%253A36%26type%3Ddesign%26node-id%3D19-136%26viewport%3D2132%252C-327%252C0.79%26t%3DF4sxlZtHKav4qd3s-1%26scaling%3Dcontain%26mode%3Ddesign"
                 allowfullscreen
             ></iframe>
-        </div>        <div
-            id="mobile",
+        </div>
+        <div
+            id="mobile"
+            ,
             style="
                 display: flex;
                 align-items: center;
@@ -60,21 +57,21 @@
         </div>
     </body>
     <script>
-    window.addEventListener("DOMContentLoaded", function() {
-        function checkOrientation() {
-            var mobile = document.getElementById("mobile");
-            var desktop = document.getElementById("desktop");
-            if (window.innerWidth > window.innerHeight) {
-                mobile.style.display = "none";
-                desktop.style.display = "block";
-            } else {
-                mobile.style.display = "block";
-                desktop.style.display = "none";
+        window.addEventListener("DOMContentLoaded", function () {
+            function checkOrientation() {
+                var mobile = document.getElementById("mobile");
+                var desktop = document.getElementById("desktop");
+                if (window.innerWidth > window.innerHeight) {
+                    mobile.style.display = "none";
+                    desktop.style.display = "block";
+                } else {
+                    mobile.style.display = "block";
+                    desktop.style.display = "none";
+                }
             }
-        }
 
-        checkOrientation();
-        window.addEventListener("resize", checkOrientation);
-    });
-</script>
+            checkOrientation();
+            window.addEventListener("resize", checkOrientation);
+        });
+    </script>
 </html>
